@@ -1,0 +1,49 @@
+{
+  "name": "dsh-tplan",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness web 插件：Token 套餐用量面板 —— 分套餐统计本会话 token 用量、实时查询余额/剩余额度、面板内管理 API Key。",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "token",
+    "usage",
+    "quota",
+    "balance",
+    "minimax",
+    "kimi"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": { "default": "./index.js" },
+    "./client": { "default": "./client.js" },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": ["slots", "connection"],
+      "immediately": true
+    }
+  }
+}
