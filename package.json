@@ -1,6 +1,6 @@
 {
   "name": "dsh-tplan",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness web 插件：Token 套餐用量面板 —— 分套餐统计本会话 token 用量、实时查询余额/剩余额度、面板内管理 API Key。",
   "keywords": [
     "deepseek",
@@ -34,7 +34,11 @@
     "node": ">=20"
   },
   "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.0-rc.6",
     "react": "^18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": { "optional": true }
   },
   "dsh": {
     "bundle": {
